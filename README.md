@@ -1,5 +1,4 @@
 # TrainerGUI
-
 ## 〇、写在前面
 
 本应用基于开源UI框架PyDracula进行开发，除去最基本的UI框架外，所有功能的前后端实现都由我个人开发完成，但也有部分UI（如开关控件和进度条）是参考其他大佬的分享。
@@ -26,14 +25,23 @@
 
 在这部分功能中实现了对图片后缀的修改，可以支持jpg、jpeg、png和bmp四种常见数据集图像格式图片的后缀更改，用户通过点击相应的按钮，执行对应的功能。
 
-1. 修改为.jpg后缀功能
-    将图片统一转为 *.jpg 后缀。支持转换 *.JPG、*.png、*.PNG、*.jpeg、*.JPEG、*.bmp、*.BMP。
-2. 修改为.jpeg后缀功能
-    将图片转为 *.jpeg 后缀。支持转换 *.jpg、*.JPG、*.png、*.PNG、*.JPEG、*.bmp、*.BMP后缀格式。
-3. 修改为.png后缀功能
-    将图片转为 *.png 后缀。支持转换 *.jpg、*.JPG、*.PNG、*.jpeg、*.JPEG、*.bmp、*.BMP后缀格式。
-4. 修改为.bmp后缀功能
-    将图片转为 *.bmp 后缀。支持转换 *.jpg、*.JPG、*.png、*.PNG、*.jpeg、*.JPEG、*.BMP后缀格式。
+1. 修改为.jpg后缀功能：
+
+    将图片统一转为 \*.jpg 后缀。支持转换 \*.JPG、\*.png、\*.PNG、\*.jpeg、\*.JPEG、\*.bmp、\*.BMP后缀格式。
+
+2. 修改为.jpeg后缀功能：
+
+    将图片转为 \*.jpeg 后缀。支持转换 \*.jpg、\*.JPG、\*.png、\*.PNG、\*.JPEG、\*.bmp、\*.BMP后缀格式。
+
+3. 修改为.png后缀功能：
+
+    将图片转为 \*.png 后缀。支持转换 \*.jpg、\*.JPG、\*.PNG、\*.jpeg、\*.JPEG、\*.bmp、\*.BMP后缀格式。
+
+4. 修改为.bmp后缀功能：
+
+    将图片转为 \*.bmp 后缀。支持转换 \*.jpg、\*.JPG、\*.png、\*.PNG、\*.jpeg、\*.JPEG、\*.BMP后缀格式。
+
+![](https://img2024.cnblogs.com/blog/2954091/202407/2954091-20240701214611890-1859203321.png)
 
 ##### (2) 更改大小
 
@@ -48,10 +56,19 @@
 | INTER_LANCZOS4     | 一种Lanczos插值方法（超过8×放大时效果最好）。 |
 | INTER_LINEAR_EXACT | 位精确双线性插值。                            |
 
+![](https://img2024.cnblogs.com/blog/2954091/202407/2954091-20240701215042455-2014161868.png)
+
 ##### (3) 图片方形化
 
 该部分功能实现了将不规则矩形图片统一为方形图片。
 
+该功能模块所支持的边框拓充方式有：
+1. BORDER_CONSTANT：用纯色背景（常数）填充，需指定拓充的RGB颜色。
+2. BORDER_REFLECT：用边界元素的镜面反射拓充。
+3. BORDER_REPLICATE：使用最边界的像素值代替。
+4. BORDER_WRAP：进行上下边缘调换的外包复制操作。
+
+![](https://img2024.cnblogs.com/blog/2954091/202407/2954091-20240701215431613-2062304415.png)
 
 
 #### 1.2 图像增强
@@ -62,15 +79,17 @@
 
 该功能可使图像进行任意角度旋转，并同时缩放处理。
 
+![](https://img2024.cnblogs.com/blog/2954091/202407/2954091-20240701221155715-2145521856.png)
 
 
 ##### (2) 水平翻转
 
+![](https://img2024.cnblogs.com/blog/2954091/202407/2954091-20240701221354717-729303443.png)
+
+
 ##### (3) 垂直翻转
 
-
-
-
+![](https://img2024.cnblogs.com/blog/2954091/202407/2954091-20240701221451383-276180294.png)
 
 ##### (4) 模糊
 
@@ -81,7 +100,7 @@
 3. 高斯滤波：滤波核必须为奇数。
 4. 中值滤波：滤波核必须为大于1的奇数。
 
-
+![](https://img2024.cnblogs.com/blog/2954091/202407/2954091-20240701221838066-847113064.png)
 
 ##### (5) 噪声
 
@@ -92,20 +111,20 @@
 
 这两种方式可以单独使用，也可以同时使用。
 
-
+![](https://img2024.cnblogs.com/blog/2954091/202407/2954091-20240701222242693-1920114344.png)
 
 ##### (6) 亮度
 
+![](https://img2024.cnblogs.com/blog/2954091/202407/2954091-20240701222958634-931010067.png)
 
 
 ##### (7) 对比度
 
-
+![](https://img2024.cnblogs.com/blog/2954091/202407/2954091-20240701223033058-1258853258.png)
 
 ##### (8) 所有功能同时启用演示
 
-
-
+![](https://img2024.cnblogs.com/blog/2954091/202407/2954091-20240701230733452-32452711.png)
 
 
 ### 2. 数据集预处理
@@ -126,6 +145,9 @@
 2. 分类i
 3. 分类-i
 
+![](https://img2024.cnblogs.com/blog/2954091/202407/2954091-20240701224102629-1517088508.png)
+
+
 ##### (3) 统一大小
 
 该功能和单张图片预处理的**更改大小**功能类似，故不再过多赘述。
@@ -134,16 +156,11 @@
 
 该功能和单张图片预处理的**图片方形化**功能类似，故不再过多赘述。
 
-
-
-
-
 ##### (5) 数据集分割
 
 该功能用于将整个数据集按照比例分割成训练集（Train）、验证集（Val）、测试集（Test）。
 
-
-
+![](https://img2024.cnblogs.com/blog/2954091/202407/2954091-20240701224429719-329902964.png)
 
 
 #### 2.2 图像增强
@@ -152,11 +169,9 @@
 
 不同之处在于，由于该模块下的图像增强功能是对整个数据集进行处理，因此该功能引入了**概率随机处理**，以及**参数在一个区间内随机取值**。
 
-同样：本部分所有功能可以**==按顺序同时叠加使用==**。
+同样：本部分所有功能可以==**按顺序同时叠加使用**==。
 
-
-
-
+![](https://img2024.cnblogs.com/blog/2954091/202407/2954091-20240701225342178-771870153.png)
 
 
 
@@ -209,16 +224,19 @@
 
 #### 3.1 训练过程可视化
 
+![](https://img2024.cnblogs.com/blog/2954091/202407/2954091-20240702093111284-1774212792.png)
+
+![](https://img2024.cnblogs.com/blog/2954091/202407/2954091-20240702093139633-801975474.png)
 
 
 #### 3.2 混淆矩阵
 
+![](https://img2024.cnblogs.com/blog/2954091/202407/2954091-20240702093210938-1276267511.png)
 
 
 #### 3.3 log输出
 
-
-
+![](https://img2024.cnblogs.com/blog/2954091/202407/2954091-20240702093318046-1680512536.png)
 
 
 ## 二、环境要求
@@ -242,14 +260,5 @@
 3. 可视化训练器部分中，模型的训练是基于PyTorch深度学习框架实现的，因此最终训练后保存的权重文件是以.pth后缀结尾的形式，如果需要其它形式，可以自行进行权重文件格式的转换。
 
 4. 如果需要使用迁移学习，请自行下载官方权重文件放在 **algorithms/trainer/imagenet** 目录下，并将下载后的权重文件重命名为“xxx.pth”，且命名必须为如下命名之一：
+
     alexnet.pth、efficientnet_b0.pth、efficientnet_b1.pth、efficientnet_b2.pth、efficientnet_b3.pth、efficientnet_b4.pth、efficientnet_b5.pth、efficientnet_b6.pth、efficientnet_b7.pth、efficientnet_v2_l.pth、efficientnet_v2_m.pth、efficientnet_v2_s.pth、googlenet.pth、mobilenet_v2.pth、mobilenet_v3_large.pth、mobilenet_v3_small.pth、resnet101.pth、resnet152.pth、resnet18.pth、resnet34.pth、resnet50.pth、resnext101_32x8d.pth、resnext50_32x4d.pth、shufflenetv2_x0_5.pth、shufflenetv2_x1_0.pth、shufflenetv2_x1_5.pth、shufflenetv2_x2_0.pth、swin_b.pth、swin_s.pth、swin_t.pth、vgg11.pth、vgg13.pth、vgg16.pth、vgg19.pth、vit_b_16.pth、vit_b_32.pth
-
-
-
-
-
-## 四、代码获取
-
-完整应用程序已免费开源在我的GitHub中：[https://github.com/CorianderSaint/TrainerGUI](https://github.com/CorianderSaint/TrainerGUI)。
-
-请需要者点一颗免费的Star⭐，十分感谢！
