@@ -256,10 +256,11 @@
 
 1. 本应用的图像处理功能由OpenCV实现，相关参数请参考OpenCV的参数说明。
 
-2. 数据集预处理功能中，传入的数据集文件夹格式必须严格按照如下方式：**root文件夹/分类1..n文件夹/图片1..n**
+2. 数据集预处理功能中，传入的数据集文件夹格式必须严格按照如下方式：**root文件夹/分类1..n文件夹/图片1..n**，导入数据集时导入root文件夹。
 
 3. 可视化训练器部分中，模型的训练是基于PyTorch深度学习框架实现的，因此最终训练后保存的权重文件是以.pth后缀结尾的形式，如果需要其它形式，可以自行进行权重文件格式的转换。
 
-4. 如果需要使用迁移学习，请自行下载官方权重文件放在 **algorithms/trainer/imagenet** 目录下，并将下载后的权重文件重命名为“xxx.pth”，且命名必须为如下命名之一：
+4. 首次启动应用进行训练可能会出现UI界面卡死的情况，请稍微等待一段时间，一段时间后就可正常使用了。
 
+5. 如果需要使用迁移学习，请自行下载官方权重文件放在 **algorithms/trainer/imagenet** 目录下，并将下载后的权重文件重命名为“xxx.pth”，且命名必须为如下命名之一：
     alexnet.pth、efficientnet_b0.pth、efficientnet_b1.pth、efficientnet_b2.pth、efficientnet_b3.pth、efficientnet_b4.pth、efficientnet_b5.pth、efficientnet_b6.pth、efficientnet_b7.pth、efficientnet_v2_l.pth、efficientnet_v2_m.pth、efficientnet_v2_s.pth、googlenet.pth、mobilenet_v2.pth、mobilenet_v3_large.pth、mobilenet_v3_small.pth、resnet101.pth、resnet152.pth、resnet18.pth、resnet34.pth、resnet50.pth、resnext101_32x8d.pth、resnext50_32x4d.pth、shufflenetv2_x0_5.pth、shufflenetv2_x1_0.pth、shufflenetv2_x1_5.pth、shufflenetv2_x2_0.pth、swin_b.pth、swin_s.pth、swin_t.pth、vgg11.pth、vgg13.pth、vgg16.pth、vgg19.pth、vit_b_16.pth、vit_b_32.pth
